@@ -23,8 +23,8 @@ struct compareNodePositon {
   }
 };
 
-auto findNodeByPosition(MultiSet& set, Vec2 position) {
-    auto it = set.begin();
+MultiSet::iterator findNodeByPosition(MultiSet& set, Vec2 position) {
+    MultiSet::iterator it = set.begin();
 
     for (; it!=set.end(); it++) {
         if ((*it)->getX()==position.first && (*it)->getY()==position.second) break;
